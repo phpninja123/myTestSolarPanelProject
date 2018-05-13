@@ -1,0 +1,1717 @@
+/**
+ * --------------------------------------------------
+ * recommend use sass to edit the color for much easier
+ *
+ * font
+ * light style
+ * black style
+ * dark style
+ * color brand
+ * --------------------------------------------------
+ * [band color code]
+ *
+ * blue
+    #FF9800
+    #ff9900
+    34, 167, 240
+
+ * green
+    #00bfa3
+    #00a68d
+    0, 191, 163
+ * red
+    #e81351
+    #d01149
+    232, 19, 81
+
+ * pink
+    #ec387d
+    #ea216e
+    236, 56, 125
+
+ * orange
+    #f2784b
+    #f06633
+    242, 120, 75
+
+ * purple
+    #626fe6
+    #4c5be2
+    98, 111, 230
+
+ * brown
+    #c3a161
+    #bc964f
+    195, 161, 97
+ * --------------------------------------------------
+ */
+/**
+ * --------------------------------------------------
+ * variable (sass)
+ * font
+ * light style
+ * black style
+ * dark style
+ * color brand
+ * --------------------------------------------------
+ */
+/**
+ * common (font-family)
+ * --------------------------------------------------
+ */
+body {
+  font-family: "raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.btn {
+  /* button */
+  font-family: "raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.site-nav-menu-list a {
+  /* menu list */
+  font-family: "raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.section-subtitle {
+  /* subtitle */
+  font-family: "raleway";
+}
+
+.countdown-period {
+  /* countdown */
+  font-family: "raleway";
+}
+
+/* address */
+.address strong {
+  font-family: "raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/**
+ * light style
+ * --------------------------------------------------
+ * add ".is-light" class to body tag
+ */
+body.is-light {
+  /* body color */
+  color: #212121;
+}
+
+.is-light h1,
+.is-light h2,
+.is-light h3,
+.is-light h4,
+.is-light h5,
+.is-light b,
+.is-light strong {
+  /* heading color */
+  color: #212121;
+}
+
+.is-light a {
+  /* link */
+  color: #212121;
+}
+
+.is-light a:focus,
+.is-light a:hover {
+  color: #333333;
+}
+
+.is-light .hr {
+  /* custom hr */
+  background-color: #212121;
+}
+
+.is-light .color {
+  /* color helper class */
+  color: #212121;
+}
+
+.is-light .btn-base {
+  /* .btn base */
+  border-color: #cacaca;
+  background-color: #fff;
+  color: #212121;
+}
+
+.is-light .btn-base:active,
+.is-light .btn-base:active:focus,
+.is-light .btn-base:focus,
+.is-light .btn-base:hover {
+  border-color: #212121;
+  background-color: #fff;
+  color: #212121;
+}
+
+.is-light .btn-theme {
+  /* .btn theme */
+  border-color: #212121;
+  background-color: #212121;
+  color: #fff;
+}
+
+.is-light .btn-theme:active,
+.is-light .btn-theme:active:focus,
+.is-light .btn-theme:focus,
+.is-light .btn-theme:hover {
+  background-color: #333333;
+  color: #fff;
+}
+
+.is-light .form-theme .form-group {
+  border-color: #212121;
+}
+
+.is-light .section-subtitle {
+  /* subtitle */
+  color: #212121;
+}
+
+.is-light .site-loader {
+  /* loader background */
+  background-color: #fbfbfb;
+}
+
+.is-light .site-loader span {
+  /* loader color */
+  border-color: rgba(33, 33, 33, 0.1);
+  border-left-color: #212121;
+}
+
+.is-light .site-loader p {
+  /* loader text */
+  color: #212121;
+}
+
+.is-light .site-layer {
+  /* layer show when nav open */
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.is-light .site-bg-overlay {
+  /* site overlay */
+  background-color: rgba(255, 255, 255, 0.55);
+}
+
+.is-light .site-header-icon-nav {
+  /* nav toggle button background */
+  background-color: #212121;
+}
+
+.is-light .site-header-icon-nav span {
+  /* nav toggle icon background */
+  background-color: #fff;
+}
+
+.is-light .site-header-icon-nav:hover {
+  background-color: #333333;
+}
+
+.is-light .site-nav:before {
+  /* site nav overlay */
+  background-color: rgba(255, 255, 255, 0.55);
+}
+
+.is-light .site-nav-icon > div:before {
+  /* nav icon (close and audio icon) */
+  background-color: #212121;
+}
+
+.is-light .site-nav-icon > div:hover:before {
+  /* nav icon (close and audio icon) */
+  background-color: #333333;
+}
+
+.is-light .site-nav-icon-close span {
+  /* nav close icon */
+  background-color: #fff;
+}
+
+.is-light .site-nav-icon-audio i {
+  /* nav audio icon */
+  color: #fff !important;
+}
+
+.is-light .site-nav-menu-list a.is-active,
+.is-light .site-nav-menu-list a:hover {
+  background-color: #212121;
+  color: #fff;
+}
+
+.is-light .site-nav-social-list i {
+  background-color: #212121;
+  color: #fff;
+}
+
+.is-light .site-nav-social-list i:hover {
+  background-color: #333333;
+}
+
+.is-light #newsletter:before {
+  /* newsletter overlay */
+  background-color: rgba(255, 255, 255, 0.55);
+}
+
+.is-light .countdown-amount {
+  /* countdown */
+  color: #212121;
+}
+
+.is-light .countdown-period {
+  /* countdown */
+  color: #212121;
+}
+
+.is-light .service-icon i {
+  /* service icon */
+  background-color: #212121;
+  color: #fff;
+}
+
+.is-light .service-icon i:hover {
+  background-color: #333333;
+}
+
+.is-light .address i {
+  /* address icon */
+  background-color: #212121;
+  color: #fff;
+}
+
+.is-light .mfp-close:hover {
+  /* magnific popup close button */
+  background-color: #333333;
+}
+
+.is-light button.mfp-close,
+.is-light button.mfp-arrow {
+  /* magnific popup close button */
+  background-color: #212121;
+}
+
+.is-light .mfp-close-btn-in .mfp-close {
+  /* magnific popup close button */
+  color: #fff;
+}
+
+/**
+ * black style
+ * --------------------------------------------------
+ * add ".is-black" class to body tag
+ */
+body.is-black {
+  /* body color */
+  color: #fff;
+}
+
+.is-black h1,
+.is-black h2,
+.is-black h3,
+.is-black h4,
+.is-black h5,
+.is-black b,
+.is-black strong {
+  /* heading color */
+  color: #fff;
+}
+
+.is-black a {
+  /* link */
+  color: #fff;
+}
+
+.is-black a:focus,
+.is-black a:hover {
+  color: #f2f2f2;
+}
+
+.is-black .hr {
+  /* custom hr */
+  background-color: #fff;
+}
+
+.is-black .color {
+  /* color helper class */
+  color: #fff;
+}
+
+.is-black .btn-base {
+  /* .btn base */
+  border-color: #fff;
+  background-color: rgb(55, 54, 54, 0.5);
+  color: #fff;
+}
+
+.is-black .btn-base:active,
+.is-black .btn-base:active:focus,
+.is-black .btn-base:focus,
+.is-black .btn-base:hover {
+    border-color: #ffffff;
+    background-color: #ff9800;
+    color: #fff;
+}
+
+.is-black .btn-theme {
+  /* .btn theme */
+  border-color: #fff;
+  background-color: #fff;
+  color: #000;
+}
+
+.is-black .btn-theme:active,
+.is-black .btn-theme:active:focus,
+.is-black .btn-theme:focus,
+.is-black .btn-theme:hover {
+  background-color: #f2f2f2;
+  color: #000;
+}
+
+.is-black .section-subtitle {
+  /* subtitle */
+  color: #fff;
+}
+
+.is-black .site-loader {
+  /* loader background */
+  background-color: #000;
+}
+
+.is-black .site-loader span {
+  /* loader color */
+  border-color: rgba(255, 255, 255, 0.1);
+  border-left-color: #fff;
+}
+
+.is-black .site-loader p {
+  /* loader text */
+  color: #fff;
+}
+
+.is-black .site-layer {
+  /* layer show when nav open */
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.is-black .site-bg-overlay {
+  /* site overlay */
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.is-black .site-header-icon-nav {
+  /* nav toggle button background */
+  background-color: #fff;
+}
+
+.is-black .site-header-icon-nav span {
+  /* nav toggle icon background */
+  background-color: #000;
+}
+
+.is-black .site-header-icon-nav:hover {
+  background-color: #f2f2f2;
+}
+
+.is-black .site-nav:before {
+  /* site nav overlay */
+  background-color: rgba(42, 42, 43, 0.8);
+}
+
+.is-black .site-nav-icon > div:before {
+  /* nav icon (close and audio icon) */
+  background-color: #fff;
+}
+
+.is-black .site-nav-icon > div:hover:before {
+  /* nav icon (close and audio icon) */
+  background-color: #f2f2f2;
+}
+
+.is-black .site-nav-icon-close span {
+  /* nav close icon */
+  background-color: #000;
+}
+
+.is-black .site-nav-icon-audio i {
+  /* nav audio icon */
+  color: #000;
+}
+
+.is-black .site-nav-menu-list a.is-active,
+.is-black .site-nav-menu-list a:hover {
+  /* background-color: #fff; */
+  color: #000;
+}
+
+.is-black .site-nav-social-list i {
+  background-color: #fff;
+  color: #000;
+}
+
+.is-black .site-nav-social-list i:hover {
+  background-color: #f2f2f2;
+}
+
+.is-black .form-theme label {
+  /* input label */
+  color: #fff;
+}
+
+.is-black #newsletter:before {
+  /* newsletter overlay */
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.is-black .countdown-amount {
+  /* countdown */
+  color: #fff;
+}
+
+.is-black .countdown-period {
+  /* countdown */
+  color: #fff;
+}
+
+.is-black .service-icon i {
+  /* service icon */
+  background-color: #fff;
+  color: #000;
+}
+
+.is-black .service-icon i:hover {
+  background-color: #f2f2f2;
+}
+
+.is-black .address i {
+  /* address icon */
+  background-color: #fff;
+  color: #000;
+}
+
+.is-black .mfp-close:hover {
+  /* magnific popup close button */
+  background-color: #f2f2f2;
+}
+
+.mfp-close-btn-in .is-black {
+  /* magnific popup close button */
+  color: #000;
+}
+
+.is-black button.mfp-close,
+.is-black button.mfp-arrow {
+  /* magnific popup close button */
+  background-color: #fff;
+}
+
+/**
+ * dark style
+ * --------------------------------------------------
+ * add ".is-dark" class to body tag
+ */
+body.is-dark {
+  /* body color */
+  color: #fff;
+}
+
+.is-dark h1,
+.is-dark h2,
+.is-dark h3,
+.is-dark h4,
+.is-dark h5,
+.is-dark b,
+.is-dark strong {
+  /* heading color */
+  color: #fff;
+}
+
+.is-dark a {
+  /* link */
+  color: #fff;
+}
+
+.is-dark a:focus,
+.is-dark a:hover {
+  color: #f2f2f2;
+}
+
+.is-dark .hr {
+  /* custom hr */
+  background-color: #fff;
+}
+
+.is-dark .color {
+  /* color helper class */
+  color: #fff;
+}
+
+.is-dark .btn-base {
+  /* .btn base */
+  border-color: #fff;
+  background-color: #fff;
+  color: #21252f;
+}
+
+.is-dark .btn-base:active,
+.is-dark .btn-base:active:focus,
+.is-dark .btn-base:focus,
+.is-dark .btn-base:hover {
+  border-color: #f2f2f2;
+  background-color: #f2f2f2;
+  color: #21252f;
+}
+
+.is-dark .btn-theme {
+  /* .btn theme */
+  border-color: #fff;
+  background-color: #fff;
+  color: #21252f;
+}
+
+.is-dark .btn-theme:active,
+.is-dark .btn-theme:active:focus,
+.is-dark .btn-theme:focus,
+.is-dark .btn-theme:hover {
+  background-color: #f2f2f2;
+  color: #21252f;
+}
+
+.is-dark .section-subtitle {
+  /* subtitle */
+  color: #fff;
+}
+
+.is-dark .site-loader {
+  /* loader background */
+  background-color: #21252f;
+}
+
+.is-dark .site-loader span {
+  /* loader color */
+  border-color: rgba(255, 255, 255, 0.1);
+  border-left-color: #fff;
+}
+
+.is-dark .site-loader p {
+  /* loader text */
+  color: #fff;
+}
+
+.is-dark .site-layer {
+  /* layer show when nav open */
+  background-color: rgba(33, 37, 47, 0.5);
+}
+
+.is-dark .site-bg-overlay {
+  /* site overlay */
+  background-color: rgba(33, 37, 47, 0.4);
+}
+
+.is-dark .site-header-icon-nav {
+  /* nav toggle button background */
+  background-color: #fff;
+}
+
+.is-dark .site-header-icon-nav span {
+  /* nav toggle icon background */
+  background-color: #21252f;
+}
+
+.is-dark .site-header-icon-nav:hover {
+  background-color: #f2f2f2;
+}
+
+.is-dark .site-nav:before {
+  /* site nav overlay */
+  background-color: rgba(33, 37, 47, 0.4);
+}
+
+.is-dark .site-nav-icon > div:before {
+  /* nav icon (close and audio icon) */
+  background-color: #fff;
+}
+
+.is-dark .site-nav-icon > div:hover:before {
+  /* nav icon (close and audio icon) */
+  background-color: #f2f2f2;
+}
+
+.is-dark .site-nav-icon-close span {
+  /* nav close icon */
+  background-color: #21252f;
+}
+
+.is-dark .site-nav-icon-audio i {
+  /* nav audio icon */
+  color: #21252f;
+}
+
+.is-dark .site-nav-menu-list a.is-active,
+.is-dark .site-nav-menu-list a:hover {
+  background-color: #fff;
+  color: #21252f;
+}
+
+.is-dark .site-nav-social-list i {
+  background-color: #fff;
+  color: #21252f;
+}
+
+.is-dark .site-nav-social-list i:hover {
+  background-color: #f2f2f2;
+}
+
+.is-dark .form-theme label {
+  /* input label */
+  color: #fff;
+}
+
+.is-dark #newsletter:before {
+  /* newsletter overlay */
+  background-color: rgba(33, 37, 47, 0.4);
+}
+
+.is-dark .countdown-amount {
+  /* countdown */
+  color: #fff;
+}
+
+.is-dark .countdown-period {
+  /* countdown */
+  color: #fff;
+}
+
+.is-dark .service-icon i {
+  /* service icon */
+  background-color: #fff;
+  color: #000;
+}
+
+.is-dark .service-icon i:hover {
+  background-color: #f2f2f2;
+}
+
+.is-dark .address i {
+  /* address icon */
+  background-color: #fff;
+  color: #21252f;
+}
+
+.is-dark .mfp-close:hover {
+  /* magnific popup close button */
+  background-color: #f2f2f2;
+}
+
+.mfp-close-btn-in .is-dark {
+  /* magnific popup close button */
+  color: #21252f;
+}
+
+.is-dark button.mfp-close,
+.is-dark button.mfp-arrow {
+  /* magnific popup close button */
+  background-color: #fff;
+}
+
+/**
+ * color brand
+ * -------------------------
+ */
+/**
+ * blue
+ * -------------------------
+ */
+.is-blue .btn-theme {
+  /* .btn-theme */
+  border-color: #FF9800;
+  background-color: #FF9800;
+  color: #fff;
+}
+
+.is-blue .btn-theme:active,
+.is-blue .btn-theme:active:focus,
+.is-blue .btn-theme:focus,
+.is-blue .btn-theme:hover {
+  border-color: #ff9900;
+  background-color: #ff9900;
+  color: #fff;
+}
+
+.is-blue .btn-theme.btn-outline {
+  background-color: transparent;
+}
+
+.is-blue .btn-theme.btn-outline:active,
+.is-blue .btn-theme.btn-outline:active:focus,
+.is-blue .btn-theme.btn-outline:focus,
+.is-blue .btn-theme.btn-outline:hover {
+  background-color: #FF9800;
+}
+
+.is-blue .color {
+  /* color helper class */
+  color: #FF9800;
+}
+
+.is-blue a {
+  /* link */
+  color: #FFf;
+}
+
+.is-blue a:not(.btn):focus,
+.is-blue a:not(.btn):hover {
+  color: #ff9900;
+}
+
+.is-blue .site-loader span {
+  /* site loader span */
+  border-color: rgba(34, 167, 240, 0.1);
+  border-left-color: #FF9800;
+}
+
+.is-blue .site-header-icon-nav {
+  /* header nav icon */
+  background-color: #FF9800;
+}
+
+.is-blue .site-header-icon-nav span {
+  /* nav toggle icon background */
+  background-color: #fff;
+}
+
+.is-blue .site-header-icon-nav:hover {
+  background-color: #ff9900;
+}
+
+.is-blue .site-nav-icon > div:before {
+  background-color: #FF9800;
+}
+
+.is-blue .site-nav-icon > div:hover:before {
+  background-color: #ff9900;
+}
+
+.is-blue .site-nav-icon-close span {
+  background-color: #fff;
+}
+
+.is-blue .site-nav-menu-list a.is-active,
+.is-blue .site-nav-menu-list a:hover,
+.is-blue .site-nav-menu-list a:focus {
+
+  color: #FF9800 !important;
+}
+
+.is-blue .site-nav-icon-audio i {
+  color: #fff;
+}
+
+.is-blue .site-nav-social-list i {
+  /* social icon */
+  background-color:rgb(42, 41, 40, 0.8);
+  color: #fff;
+}
+
+.is-blue .site-nav-social-list i:hover {
+  background-color: #ff9900;
+}
+
+.is-blue .service-icon i {
+  /* service icon */
+  background-color: #FF9800;
+  color: #fff;
+}
+
+.is-blue .service-icon i:hover {
+  background-color: #ff9900;
+}
+
+.is-blue .address i {
+  /* address icon */
+  background-color: #FF9800;
+  color: #fff !important;
+}
+
+.is-blue .address i:hover {
+  background-color: #ff9900;
+}
+
+.is-blue .mfp-close:hover {
+  /* magnific popup close button */
+  background-color: #ff9900;
+}
+
+.is-blue button.mfp-close,
+.is-blue button.mfp-arrow {
+  /* magnific popup close button */
+  background-color: #FF9800;
+  color: #fff;
+}
+
+.is-blue.is-light .site-nav-menu-list a {
+  /* nav link color */
+  color: #212121;
+}
+
+.is-blue.is-black .site-nav-menu-list a,
+.is-blue.is-dark .site-nav-menu-list a {
+  /* nav link color */
+  color: #878787;
+}
+
+/**
+ * green
+ * -------------------------
+ */
+.is-green .btn-theme {
+  /* .btn-theme */
+  border-color: #00bfa3;
+  background-color: #00bfa3;
+  color: #fff;
+}
+
+.is-green .btn-theme:active,
+.is-green .btn-theme:active:focus,
+.is-green .btn-theme:focus,
+.is-green .btn-theme:hover {
+  border-color: #00a68d;
+  background-color: #00a68d;
+  color: #fff;
+}
+
+.is-green .btn-theme.btn-outline {
+  background-color: transparent;
+}
+
+.is-green .btn-theme.btn-outline:active,
+.is-green .btn-theme.btn-outline:active:focus,
+.is-green .btn-theme.btn-outline:focus,
+.is-green .btn-theme.btn-outline:hover {
+  background-color: #00bfa3;
+}
+
+.is-green .color {
+  /* color helper class */
+  color: #00bfa3;
+}
+
+.is-green a {
+  /* link */
+  color: #00bfa3;
+}
+
+.is-green a:not(.btn):focus,
+.is-green a:not(.btn):hover {
+  color: #00a68d;
+}
+
+.is-green .site-loader span {
+  /* site loader span */
+  border-color: rgba(0, 191, 163, 0.1);
+  border-left-color: #00bfa3;
+}
+
+.is-green .site-header-icon-nav {
+  /* header nav icon */
+  background-color: #00bfa3;
+}
+
+.is-green .site-header-icon-nav span {
+  /* nav toggle icon background */
+  background-color: #fff;
+}
+
+.is-green .site-header-icon-nav:hover {
+  background-color: #00a68d;
+}
+
+.is-green .site-nav-icon > div:before {
+  background-color: #00bfa3;
+}
+
+.is-green .site-nav-icon > div:hover:before {
+  background-color: #00a68d;
+}
+
+.is-green .site-nav-icon-close span {
+  background-color: #fff;
+}
+
+.is-green .site-nav-menu-list a.is-active,
+.is-green .site-nav-menu-list a:hover,
+.is-green .site-nav-menu-list a:focus {
+  background-color: #00bfa3;
+  color: #fff !important;
+}
+
+.is-green .site-nav-icon-audio i {
+  color: #fff;
+}
+
+.is-green .site-nav-social-list i {
+  /* social icon */
+  background-color: #00bfa3;
+  color: #fff;
+}
+
+.is-green .site-nav-social-list i:hover {
+  background-color: #00a68d;
+}
+
+.is-green .service-icon i {
+  /* service icon */
+  background-color: #00bfa3;
+  color: #fff;
+}
+
+.is-green .service-icon i:hover {
+  background-color: #00a68d;
+}
+
+.is-green .address i {
+  /* address icon */
+  background-color: #00bfa3;
+  color: #fff !important;
+}
+
+.is-green .address i:hover {
+  background-color: #00a68d;
+}
+
+.is-green .mfp-close:hover {
+  /* magnific popup close button */
+  background-color: #00a68d;
+}
+
+.is-green button.mfp-close,
+.is-green button.mfp-arrow {
+  /* magnific popup close button */
+  background-color: #00bfa3;
+  color: #fff;
+}
+
+.is-green.is-light .site-nav-menu-list a {
+  /* nav link color */
+  color: #212121;
+}
+
+.is-green.is-black .site-nav-menu-list a,
+.is-green.is-dark .site-nav-menu-list a {
+  /* nav link color */
+  color: #fff;
+}
+
+/**
+ * red
+ * -------------------------
+ */
+.is-red .btn-theme {
+  /* .btn-theme */
+  border-color: #e81351;
+  background-color: #e81351;
+  color: #fff;
+}
+
+.is-red .btn-theme:active,
+.is-red .btn-theme:active:focus,
+.is-red .btn-theme:focus,
+.is-red .btn-theme:hover {
+  border-color: #d01149;
+  background-color: #d01149;
+  color: #fff;
+}
+
+.is-red .btn-theme.btn-outline {
+  background-color: transparent;
+}
+
+.is-red .btn-theme.btn-outline:active,
+.is-red .btn-theme.btn-outline:active:focus,
+.is-red .btn-theme.btn-outline:focus,
+.is-red .btn-theme.btn-outline:hover {
+  background-color: #e81351;
+}
+
+.is-red .color {
+  /* color helper class */
+  color: #e81351;
+}
+
+.is-red a {
+  /* link */
+  color: #e81351;
+}
+
+.is-red a:not(.btn):focus,
+.is-red a:not(.btn):hover {
+  color: #d01149;
+}
+
+.is-red .site-loader span {
+  /* site loader span */
+  border-color: rgba(232, 19, 81, 0.1);
+  border-left-color: #e81351;
+}
+
+.is-red .site-header-icon-nav {
+  /* header nav icon */
+  background-color: #e81351;
+}
+
+.is-red .site-header-icon-nav span {
+  /* nav toggle icon background */
+  background-color: #fff;
+}
+
+.is-red .site-header-icon-nav:hover {
+  background-color: #d01149;
+}
+
+.is-red .site-nav-icon > div:before {
+  background-color: #e81351;
+}
+
+.is-red .site-nav-icon > div:hover:before {
+  background-color: #d01149;
+}
+
+.is-red .site-nav-icon-close span {
+  background-color: #fff;
+}
+
+.is-red .site-nav-menu-list a.is-active,
+.is-red .site-nav-menu-list a:hover,
+.is-red .site-nav-menu-list a:focus {
+  background-color: #e81351;
+  color: #fff !important;
+}
+
+.is-red .site-nav-icon-audio i {
+  color: #fff;
+}
+
+.is-red .site-nav-social-list i {
+  /* social icon */
+  background-color: #e81351;
+  color: #fff;
+}
+
+.is-red .site-nav-social-list i:hover {
+  background-color: #d01149;
+}
+
+.is-red .service-icon i {
+  /* service icon */
+  background-color: #e81351;
+  color: #fff;
+}
+
+.is-red .service-icon i:hover {
+  background-color: #d01149;
+}
+
+.is-red .address i {
+  /* address icon */
+  background-color: #e81351;
+  color: #fff !important;
+}
+
+.is-red .address i:hover {
+  background-color: #d01149;
+}
+
+.is-red .mfp-close:hover {
+  /* magnific popup close button */
+  background-color: #d01149;
+}
+
+.is-red button.mfp-close,
+.is-red button.mfp-arrow {
+  /* magnific popup close button */
+  background-color: #e81351;
+  color: #fff;
+}
+
+.is-red.is-light .site-nav-menu-list a {
+  /* nav link color */
+  color: #212121;
+}
+
+.is-red.is-black .site-nav-menu-list a,
+.is-red.is-dark .site-nav-menu-list a {
+  /* nav link color */
+  color: #fff;
+}
+
+/**
+ * pink
+ * -------------------------
+ */
+.is-pink .btn-theme {
+  /* .btn-theme */
+  border-color: #ec387d;
+  background-color: #ec387d;
+  color: #fff;
+}
+
+.is-pink .btn-theme:active,
+.is-pink .btn-theme:active:focus,
+.is-pink .btn-theme:focus,
+.is-pink .btn-theme:hover {
+  border-color: #ea216e;
+  background-color: #ea216e;
+  color: #fff;
+}
+
+.is-pink .btn-theme.btn-outline {
+  background-color: transparent;
+}
+
+.is-pink .btn-theme.btn-outline:active,
+.is-pink .btn-theme.btn-outline:active:focus,
+.is-pink .btn-theme.btn-outline:focus,
+.is-pink .btn-theme.btn-outline:hover {
+  background-color: #ec387d;
+}
+
+.is-pink .color {
+  /* color helper class */
+  color: #ec387d;
+}
+
+.is-pink a {
+  /* link */
+  color: #ec387d;
+}
+
+.is-pink a:not(.btn):focus,
+.is-pink a:not(.btn):hover {
+  color: #ea216e;
+}
+
+.is-pink .site-loader span {
+  /* site loader span */
+  border-color: rgba(236, 56, 125, 0.1);
+  border-left-color: #ec387d;
+}
+
+.is-pink .site-header-icon-nav {
+  /* header nav icon */
+  background-color: #ec387d;
+}
+
+.is-pink .site-header-icon-nav span {
+  /* nav toggle icon background */
+  background-color: #fff;
+}
+
+.is-pink .site-header-icon-nav:hover {
+  background-color: #ea216e;
+}
+
+.is-pink .site-nav-icon > div:before {
+  background-color: #ec387d;
+}
+
+.is-pink .site-nav-icon > div:hover:before {
+  background-color: #ea216e;
+}
+
+.is-pink .site-nav-icon-close span {
+  background-color: #fff;
+}
+
+.is-pink .site-nav-menu-list a.is-active,
+.is-pink .site-nav-menu-list a:hover,
+.is-pink .site-nav-menu-list a:focus {
+  background-color: #ec387d;
+  color: #fff !important;
+}
+
+.is-pink .site-nav-icon-audio i {
+  color: #fff;
+}
+
+.is-pink .site-nav-social-list i {
+  /* social icon */
+  background-color: #ec387d;
+  color: #fff;
+}
+
+.is-pink .site-nav-social-list i:hover {
+  background-color: #ea216e;
+}
+
+.is-pink .service-icon i {
+  /* service icon */
+  background-color: #ec387d;
+  color: #fff;
+}
+
+.is-pink .service-icon i:hover {
+  background-color: #ea216e;
+}
+
+.is-pink .address i {
+  /* address icon */
+  background-color: #ec387d;
+  color: #fff !important;
+}
+
+.is-pink .address i:hover {
+  background-color: #ea216e;
+}
+
+.is-pink .mfp-close:hover {
+  /* magnific popup close button */
+  background-color: #ea216e;
+}
+
+.is-pink button.mfp-close,
+.is-pink button.mfp-arrow {
+  /* magnific popup close button */
+  background-color: #ec387d;
+  color: #fff;
+}
+
+.is-pink.is-light .site-nav-menu-list a {
+  /* nav link color */
+  color: #212121;
+}
+
+.is-pink.is-black .site-nav-menu-list a,
+.is-pink.is-dark .site-nav-menu-list a {
+  /* nav link color */
+  color: #fff;
+}
+
+/**
+ * orange
+ * -------------------------
+ */
+.is-orange .btn-theme {
+  /* .btn-theme */
+  border-color: #f2784b;
+  background-color: #f2784b;
+  color: #fff;
+}
+
+.is-orange .btn-theme:active,
+.is-orange .btn-theme:active:focus,
+.is-orange .btn-theme:focus,
+.is-orange .btn-theme:hover {
+  border-color: #f06633;
+  background-color: #f06633;
+  color: #fff;
+}
+
+.is-orange .btn-theme.btn-outline {
+  background-color: transparent;
+}
+
+.is-orange .btn-theme.btn-outline:active,
+.is-orange .btn-theme.btn-outline:active:focus,
+.is-orange .btn-theme.btn-outline:focus,
+.is-orange .btn-theme.btn-outline:hover {
+  background-color: #f2784b;
+}
+
+.is-orange .color {
+  /* color helper class */
+  color: #f2784b;
+}
+
+.is-orange a {
+  /* link */
+  color: #f2784b;
+}
+
+.is-orange a:not(.btn):focus,
+.is-orange a:not(.btn):hover {
+  color: #f06633;
+}
+
+.is-orange .site-loader span {
+  /* site loader span */
+  border-color: rgba(242, 120, 75, 0.1);
+  border-left-color: #f2784b;
+}
+
+.is-orange .site-header-icon-nav {
+  /* header nav icon */
+  background-color: #f2784b;
+}
+
+.is-orange .site-header-icon-nav span {
+  /* nav toggle icon background */
+  background-color: #fff;
+}
+
+.is-orange .site-header-icon-nav:hover {
+  background-color: #f06633;
+}
+
+.is-orange .site-nav-icon > div:before {
+  background-color: #f2784b;
+}
+
+.is-orange .site-nav-icon > div:hover:before {
+  background-color: #f06633;
+}
+
+.is-orange .site-nav-icon-close span {
+  background-color: #fff;
+}
+
+.is-orange .site-nav-menu-list a.is-active,
+.is-orange .site-nav-menu-list a:hover,
+.is-orange .site-nav-menu-list a:focus {
+  background-color: #f2784b;
+  color: #fff !important;
+}
+
+.is-orange .site-nav-icon-audio i {
+  color: #fff;
+}
+
+.is-orange .site-nav-social-list i {
+  /* social icon */
+  background-color: #f2784b;
+  color: #fff;
+}
+
+.is-orange .site-nav-social-list i:hover {
+  background-color: #f06633;
+}
+
+.is-orange .service-icon i {
+  /* service icon */
+  background-color: #f2784b;
+  color: #fff;
+}
+
+.is-orange .service-icon i:hover {
+  background-color: #f06633;
+}
+
+.is-orange .address i {
+  /* address icon */
+  background-color: #f2784b;
+  color: #fff !important;
+}
+
+.is-orange .address i:hover {
+  background-color: #f06633;
+}
+
+.is-orange .mfp-close:hover {
+  /* magnific popup close button */
+  background-color: #f06633;
+}
+
+.is-orange button.mfp-close,
+.is-orange button.mfp-arrow {
+  /* magnific popup close button */
+  background-color: #f2784b;
+  color: #fff;
+}
+
+.is-orange.is-light .site-nav-menu-list a {
+  /* nav link color */
+  color: #212121;
+}
+
+.is-orange.is-black .site-nav-menu-list a,
+.is-orange.is-dark .site-nav-menu-list a {
+  /* nav link color */
+  color: #fff;
+}
+
+/**
+ * purple
+ * -------------------------
+ */
+.is-purple .btn-theme {
+  /* .btn-theme */
+  border-color: #626fe6;
+  background-color: #626fe6;
+  color: #fff;
+}
+
+.is-purple .btn-theme:active,
+.is-purple .btn-theme:active:focus,
+.is-purple .btn-theme:focus,
+.is-purple .btn-theme:hover {
+  border-color: #4c5be2;
+  background-color: #4c5be2;
+  color: #fff;
+}
+
+.is-purple .btn-theme.btn-outline {
+  background-color: transparent;
+}
+
+.is-purple .btn-theme.btn-outline:active,
+.is-purple .btn-theme.btn-outline:active:focus,
+.is-purple .btn-theme.btn-outline:focus,
+.is-purple .btn-theme.btn-outline:hover {
+  background-color: #626fe6;
+}
+
+.is-purple .color {
+  /* color helper class */
+  color: #626fe6;
+}
+
+.is-purple a {
+  /* link */
+  color: #626fe6;
+}
+
+.is-purple a:not(.btn):focus,
+.is-purple a:not(.btn):hover {
+  color: #4c5be2;
+}
+
+.is-purple .site-loader span {
+  /* site loader span */
+  border-color: rgba(98, 111, 230, 0.1);
+  border-left-color: #626fe6;
+}
+
+.is-purple .site-header-icon-nav {
+  /* header nav icon */
+  background-color: #626fe6;
+}
+
+.is-purple .site-header-icon-nav span {
+  /* nav toggle icon background */
+  background-color: #fff;
+}
+
+.is-purple .site-header-icon-nav:hover {
+  background-color: #4c5be2;
+}
+
+.is-purple .site-nav-icon > div:before {
+  background-color: #626fe6;
+}
+
+.is-purple .site-nav-icon > div:hover:before {
+  background-color: #4c5be2;
+}
+
+.is-purple .site-nav-icon-close span {
+  background-color: #fff;
+}
+
+.is-purple .site-nav-menu-list a.is-active,
+.is-purple .site-nav-menu-list a:hover,
+.is-purple .site-nav-menu-list a:focus {
+  background-color: #626fe6;
+  color: #fff !important;
+}
+
+.is-purple .site-nav-icon-audio i {
+  color: #fff;
+}
+
+.is-purple .site-nav-social-list i {
+  /* social icon */
+  background-color: #626fe6;
+  color: #fff;
+}
+
+.is-purple .site-nav-social-list i:hover {
+  background-color: #4c5be2;
+}
+
+.is-purple .service-icon i {
+  /* service icon */
+  background-color: #626fe6;
+  color: #fff;
+}
+
+.is-purple .service-icon i:hover {
+  background-color: #4c5be2;
+}
+
+.is-purple .address i {
+  /* address icon */
+  background-color: #626fe6;
+  color: #fff !important;
+}
+
+.is-purple .address i:hover {
+  background-color: #4c5be2;
+}
+
+.is-purple .mfp-close:hover {
+  /* magnific popup close button */
+  background-color: #4c5be2;
+}
+
+.is-purple button.mfp-close,
+.is-purple button.mfp-arrow {
+  /* magnific popup close button */
+  background-color: #626fe6;
+  color: #fff;
+}
+
+.is-purple.is-light .site-nav-menu-list a {
+  /* nav link color */
+  color: #212121;
+}
+
+.is-purple.is-black .site-nav-menu-list a,
+.is-purple.is-dark .site-nav-menu-list a {
+  /* nav link color */
+  color: #fff;
+}
+
+/**
+ * brown
+ * -------------------------
+ */
+.is-brown .btn-theme {
+  /* .btn-theme */
+  border-color: #c3a161;
+  background-color: #c3a161;
+  color: #fff;
+}
+
+.is-brown .btn-theme:active,
+.is-brown .btn-theme:active:focus,
+.is-brown .btn-theme:focus,
+.is-brown .btn-theme:hover {
+  border-color: #bc964f;
+  background-color: #bc964f;
+  color: #fff;
+}
+
+.is-brown .btn-theme.btn-outline {
+  background-color: transparent;
+}
+
+.is-brown .btn-theme.btn-outline:active,
+.is-brown .btn-theme.btn-outline:active:focus,
+.is-brown .btn-theme.btn-outline:focus,
+.is-brown .btn-theme.btn-outline:hover {
+  background-color: #c3a161;
+}
+
+.is-brown .color {
+  /* color helper class */
+  color: #c3a161;
+}
+
+.is-brown a {
+  /* link */
+  color: #c3a161;
+}
+
+.is-brown a:not(.btn):focus,
+.is-brown a:not(.btn):hover {
+  color: #bc964f;
+}
+
+.is-brown .site-loader span {
+  /* site loader span */
+  border-color: rgba(195, 161, 97, 0.1);
+  border-left-color: #c3a161;
+}
+
+.is-brown .site-header-icon-nav {
+  /* header nav icon */
+  background-color: #c3a161;
+}
+
+.is-brown .site-header-icon-nav span {
+  /* nav toggle icon background */
+  background-color: #fff;
+}
+
+.is-brown .site-header-icon-nav:hover {
+  background-color: #bc964f;
+}
+
+.is-brown .site-nav-icon > div:before {
+  background-color: #c3a161;
+}
+
+.is-brown .site-nav-icon > div:hover:before {
+  background-color: #bc964f;
+}
+
+.is-brown .site-nav-icon-close span {
+  background-color: #fff;
+}
+
+.is-brown .site-nav-menu-list a.is-active,
+.is-brown .site-nav-menu-list a:hover,
+.is-brown .site-nav-menu-list a:focus {
+  background-color: #c3a161;
+  color: #fff !important;
+}
+
+.is-brown .site-nav-icon-audio i {
+  color: #fff;
+}
+
+.is-brown .site-nav-social-list i {
+  /* social icon */
+  background-color: #c3a161;
+  color: #fff;
+}
+
+.is-brown .site-nav-social-list i:hover {
+  background-color: #bc964f;
+}
+
+.is-brown .service-icon i {
+  /* service icon */
+  background-color: #c3a161;
+  color: #fff;
+}
+
+.is-brown .service-icon i:hover {
+  background-color: #bc964f;
+}
+
+.is-brown .address i {
+  /* address icon */
+  background-color: #c3a161;
+  color: #fff !important;
+}
+
+.is-brown .address i:hover {
+  background-color: #bc964f;
+}
+
+.is-brown .mfp-close:hover {
+  /* magnific popup close button */
+  background-color: #bc964f;
+}
+
+.is-brown button.mfp-close,
+.is-brown button.mfp-arrow {
+  /* magnific popup close button */
+  background-color: #c3a161;
+  color: #fff;
+}
+
+.is-brown.is-light .site-nav-menu-list a {
+  /* nav link color */
+  color: #212121;
+}
+
+.is-brown.is-black .site-nav-menu-list a,
+.is-brown.is-dark .site-nav-menu-list a {
+  /* nav link color */
+  color: #fff;
+}
