@@ -225,7 +225,7 @@
                                             <br>
                                             <div class="roof-info-row info-row-padding">
                                                 <div class="row text-center"> 
-                                                    <a id="start_drawing" class="btn btn-icon btn-base index-page-button simulator-cal-button" href="javascript:;" data-effect="mfp-zoom-in" data-animation-in="fadeInUp" data-animation-in-delay="1200" data-animation-out="fadeOutDown" data-animation-out-delay="300"> Empieza a dibujar</a>                                       </div>
+                                                    <a id="start_drawing" class="btn btn-icon btn-base index-page-button simulator-cal-button" href="javascript:enablePolygonDrawing();" data-effect="mfp-zoom-in" data-animation-in="fadeInUp" data-animation-in-delay="1200" data-animation-out="fadeOutDown" data-animation-out-delay="300"> Empieza a dibujar</a>                                       </div>
                                         </div>
                                     </div>
                                 </div>
@@ -590,15 +590,14 @@
         });
 
         initAutocomplete(map);
-
-        $("#start_drawing").click(function(map){
-            google.maps.event.addListener(map, "click", function(evt) {
-                // When the map is clicked, pass the LatLng obect to the measureAdd function
-                measureAdd(evt.latLng);
-            });                
-        });
     });
-
+    
+    function enablePolygonDrawing() {
+        google.maps.event.addListener(map, "click", function(evt) {
+            // When the map is clicked, pass the LatLng obect to the measureAdd function
+            measureAdd(evt.latLng);
+        });
+    }
 
 
     function measureAdd(latLng) {
@@ -610,7 +609,7 @@
             draggable: true,
             raiseOnDrag: false,
             title: "Drag me to change shape",
-            icon: new google.maps.MarkerImage("/images/demos/markers/measure-vertex.png", new google.maps.Size(9, 9), new google.maps.Point(0, 0), new google.maps.Point(5, 5))
+            icon: new google.maps.MarkerImage("assets/img/ico-map-big.png", new google.maps.Size(9, 9), new google.maps.Point(0, 0), new google.maps.Point(5, 5))
         });
 
         // Add this LatLng to our line and polygon MVCArrays
@@ -628,12 +627,12 @@
 
         // When the user mouses over the measure vertex markers, change shape and color to make it obvious they can be moved
         google.maps.event.addListener(marker, "mouseover", function() {
-            marker.setIcon(new google.maps.MarkerImage("/images/demos/markers/measure-vertex-hover.png", new google.maps.Size(15, 15), new google.maps.Point(0, 0), new google.maps.Point(8, 8)));
+            marker.setIcon(new google.maps.MarkerImage("assets/img/ico-map-big.png", new google.maps.Size(15, 15), new google.maps.Point(0, 0), new google.maps.Point(8, 8)));
         });
 
         // Change back to the default marker when the user mouses out
         google.maps.event.addListener(marker, "mouseout", function() {
-            marker.setIcon(new google.maps.MarkerImage("/images/demos/markers/measure-vertex.png", new google.maps.Size(9, 9), new google.maps.Point(0, 0), new google.maps.Point(5, 5)));
+            marker.setIcon(new google.maps.MarkerImage("assets/img/ico-map-big.png", new google.maps.Size(9, 9), new google.maps.Point(0, 0), new google.maps.Point(5, 5)));
         });
 
         // When the measure vertex markers are dragged, update the geometry of the line and polygon by resetting the
@@ -655,15 +654,24 @@
 
             // If the line hasn't been created yet
             if (!measure.line) {
-
+                var lineSymbol = {
+                  path: 'M 0,-1 0,1',
+                  strokeOpacity: 0.5,
+                  scale: 4
+                };
                 // Create the line (google.maps.Polyline)
                 measure.line = new google.maps.Polyline({
                     map: map,
                     clickable: false,
                     strokeColor: "#FF0000",
-                    strokeOpacity: 1,
+                    strokeOpacity: 0,
                     strokeWeight: 3,
-                    path: measure.mvcLine
+                    path: measure.mvcLine,
+                    icons: [{
+                        icon: lineSymbol,
+                        offset: '0',
+                        repeat: '20px'
+                      }],
                 });
 
             }
