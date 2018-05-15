@@ -17,4 +17,25 @@ $(document).ready(function(){
 			}
 		})
 	});
+
+	$("#signup_btn").click(function(){
+		var Name = $("#Name").val();
+		var Mobile = $("#Mobile").val();
+		var EmailID = $("#EmailID").val();
+		var Password = $("#Password").val();
+
+		$.ajax({
+			url : 'includes/user_signup.php',
+			data : { Name:Name, Mobile:Mobile, EmailID:EmailID, Password:Password },
+			type : 'POST',
+			success : function(data){
+				data = JSON.parse(data);
+				if( data.status == 200 ) {
+					window.location = 'login.html';
+				} else {
+					$("#error_container").html('<div class="alert alert-danger" role="alert">Wrong email id or password </div>')
+				}
+			}
+		})
+	});
 });

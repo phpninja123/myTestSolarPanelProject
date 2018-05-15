@@ -182,7 +182,8 @@
                                                         <input type="text" class="form-control" id="main_search_bar" name="name" placeholder="Introduce to direction" area-hidden="true"> </div>
                                                 </div>
                                             </div>
-                                            <div class="row text-center"> <a class="btn btn-icon btn-base index-page-button" href="how_its_work.html" data-effect="mfp-zoom-in" data-animation-in="fadeInUp" data-animation-in-delay="1200" data-animation-out="fadeOutDown" data-animation-out-delay="300"> search </a></div>
+                                            <div class="row text-center"> 
+                                                <a class="btn btn-icon btn-base index-page-button" href="how_its_work.html" data-effect="mfp-zoom-in" data-animation-in="fadeInUp" data-animation-in-delay="1200" data-animation-out="fadeOutDown" data-animation-out-delay="300"> search </a></div>
                                             <div class="form-notify"></div>
                                         </form>
                                     </div>
@@ -291,7 +292,8 @@
                                                     <!-- <a id="start_drawing" class="btn btn-icon btn-base index-page-button simulator-cal-button" href="javascript:enablePolygonDrawing();" data-effect="mfp-zoom-in" data-animation-in="fadeInUp" data-animation-in-delay="1200" data-animation-out="fadeOutDown" data-animation-out-delay="300"> Empieza a dibujar</a> -->
                                                     <a id="start_drawing" class="btn btn-icon btn-base index-page-button simulator-cal-button" href="javascript:enablePolygonDrawing();" data-effect="mfp-zoom-in" data-animation-in="fadeInUp" data-animation-in-delay="1200" data-animation-out="fadeOutDown" data-animation-out-delay="300"> Add solar point </a> 
                                                 </div>
-                                                <div class="row text-center simulator-cal-button-conti"> <a class="btn btn-icon btn-base index-page-button" href="#" data-effect="mfp-zoom-in" data-animation-in="fadeInUp" data-animation-in-delay="1200" data-animation-out="fadeOutDown" data-animation-out-delay="300"> Continue </a> </div>
+                                                <div class="row text-center simulator-cal-button-conti"> 
+                                                    <a id="continue" class="btn btn-icon btn-base index-page-button" href="javascript:;" data-effect="mfp-zoom-in" data-animation-in="fadeInUp" data-animation-in-delay="1200" data-animation-out="fadeOutDown" data-animation-out-delay="300"> Continue </a> </div>
                                             </div>
                                         </div>
                                     </div>
@@ -302,8 +304,8 @@
                 </div>
             </div>
     </div>
-    <div id="service" class=""  style="display:none">
-        <div class="section-wrap simulator-cal-prev">
+    <div class="">
+        <div id="InstalltionType" class="section-wrap simulator-cal-prev" style="display:none">
             <div class="section-cell cal-box-padding ">
                 <div class="container">
                     <div class="section-content row">
@@ -317,17 +319,17 @@
                                     <div class="col-md-4 col-xs-4"> <img class="box-cal-images" src="assets/img/house.png">
                                         <p class="box-cal-clr">HOME</p>
                                         <label for="radio-one">
-                                            <input type="radio" name="exampleRadios" id="radio-one" value="radio-one" /> <i></i> <span></span> </label>
+                                            <input type="radio" name="InstallationType" class="installationType" id="radio-one" value="HOME" /> <i></i> <span></span> </label>
                                     </div>
                                     <div class="col-md-4 col-xs-4 "> <img class="box-cal-images" src="assets/img/business.png">
                                         <p class="box-cal-clr">BUSINESS</p>
                                         <label for="radio-two">
-                                            <input type="radio" name="exampleRadios" id="radio-two" value="radio-two" /> <i></i> <span></span> </label>
+                                            <input type="radio" name="InstallationType" class="installationType" id="radio-two" value="BUSINESS" /> <i></i> <span></span> </label>
                                     </div>
                                     <div class="col-md-4 col-xs-4"> <img class="box-cal-images" src="assets/img/factory.png">
                                         <p class="box-cal-clr">FACTORY</p>
                                         <label for="radio-three">
-                                            <input type="radio" name="exampleRadios" id="radio-three" value="radio-three" /> <i></i> <span></span> </label>
+                                            <input type="radio" name="InstallationType" class="installationType" id="radio-three" value="FACTORY" /> <i></i> <span></span> </label>
                                     </div>
                                 </div>
                             </div>
@@ -337,7 +339,7 @@
                 </div>
             </div>
         </div>
-        <div class="section-wrap simulator-cal-prev">
+        <div id="ElectricityBills" class="section-wrap simulator-cal-prev" style="display:none">
             <div class="section-cell cal-box-padding">
                 <div class="container">
                     <div class="section-content row">
@@ -351,7 +353,10 @@
                                     <br>
                                     <br>
                                     <div class="slider-wrapper slider-wrapper-width">
-                                        <input id="range-slider" class="fluid-slider" type="range" value="80" min="0" max="100"> <span id="range-label" class="range-label"></span> </div><a class="btn btn-icon btn-base index-page-button" href="#" data-animation-in="fadeInUp" data-animation-in-delay="1400" data-animation-out="fadeOutDown" data-animation-out-delay="100"> next </a> </div>
+                                        <input id="range-slider" class="fluid-slider" type="range" value="80" min="0" max="100"> <span id="range-label" class="range-label"></span> 
+                                    </div>
+                                    <a id="electricity_next_btn" class="btn btn-icon btn-base index-page-button" href="javascript:;" data-animation-in="fadeInUp" data-animation-in-delay="1400" data-animation-out="fadeOutDown" data-animation-out-delay="100"> next </a> 
+                                </div>
                             </div>
                             <div class="col-md-3"></div>
                         </div>
@@ -359,7 +364,7 @@
                 </div>
             </div>
         </div>
-        <div class="section-wrap simulator-cal-prev">
+        <div id="WhenConsumeMoreLight" class="section-wrap simulator-cal-prev" style="display:none">
             <div class="section-cell cal-box-padding">
                 <div class="container">
                     <div class="section-content row">
@@ -372,17 +377,17 @@
                                 <div class="col-md-4 col-xs-4"> <img class="box-cal-images" src="assets/img/sunset.png">
                                     <p class="box-cal-clr">MAÑANA</p>
                                     <label for="check-one">
-                                        <input type="checkbox" name="check-one" id="check-one" value="checkone" /> <i></i> <span></span> </label>
+                                        <input type="checkbox" class="consume_type_checkbox" name="check-one" id="check-one" value="MANANA" /> <i></i> <span></span> </label>
                                 </div>
                                 <div class="col-md-4 col-xs-4"> <img class="box-cal-images" src="assets/img/morning.png">
                                     <p class="box-cal-clr">TARDE</p>
                                     <label for="check-two">
-                                        <input type="checkbox" name="check-two" id="check-two" value="checkone" /> <i></i> <span></span> </label>
+                                        <input type="checkbox" class="consume_type_checkbox" name="check-two" id="check-two" value="TARDE" /> <i></i> <span></span> </label>
                                 </div>
                                 <div class="col-md-4 col-xs-4"> <img class="box-cal-images" src="assets/img/night.png">
                                     <p class="box-cal-clr">NOCHE</p>
                                     <label for="check-three">
-                                        <input type="checkbox" name="check-three" id="check-three" value="checkone" /> <i></i> <span></span> </label>
+                                        <input type="checkbox" class="consume_type_checkbox" name="check-three" id="check-three" value="NOCHE" /> <i></i> <span></span> </label>
                                 </div>
                             </div>
                         </div>
@@ -394,7 +399,7 @@
         <div class="section-wrap simulator-cal-prev">
             <div class="section-cell cal-box-padding">
                 <div class="container">
-                    <div class="section-content row">
+                    <div id="Budget" class="section-content row" style="display:none">
                         <div class="col-md-3"></div>
                         <div class=" col-md-6 overflow-hidden">
                             <div class="service-item item" data-animation-in="fadeInUp" data-animation-in-delay="600" data-animation-out="fadeOutDown" data-animation-out-delay="300">
@@ -405,15 +410,15 @@
                                     <div class="row">
                                         <div class="col-sm-12">
                                             <div class="form-group required ">
-                                                <input id="pac-input" type="text" class="form-control" id="contact_name" name="value" style="color: #fff;"> </div>
+                                                <input id="Budget_Input" type="text" class="form-control" id="contact_name" name="value" style="color: #fff;"> </div>
                                         </div>
                                     </div>
                                     <div class="form-notify"></div>
-                                </form> <a class="btn btn-icon btn-base index-page-button" href="#" data-animation-in="fadeInUp" data-animation-in-delay="1400" data-animation-out="fadeOutDown" data-animation-out-delay="100"> next </a> </div>
+                                </form> <a id="budget_btn" class="btn btn-icon btn-base index-page-button" href="javascript:;" data-animation-in="fadeInUp" data-animation-in-delay="1400" data-animation-out="fadeOutDown" data-animation-out-delay="100"> next </a> </div>
                         </div>
                         <div class="col-md-3"></div>
                     </div>
-                    <div class="section-content row">
+                    <div id="Advice" class="section-content row" style="display:none">
                         <div class="col-md-3"></div>
                         <div class=" col-md-6 overflow-hidden">
                             <div class="service-item item" data-animation-in="fadeInUp" data-animation-in-delay="600" data-animation-out="fadeOutDown" data-animation-out-delay="300">
@@ -423,7 +428,8 @@
                                 <div class="form-group required">
                                     <label class="form-label" for="contact_message"></label>
                                     <textarea class="form-control" id="contact_message" rows="4" name="message" placeholder="Message" style="background-color: #121212;color: #fff; text-align:center;"></textarea>
-                                </div><a class="btn btn-icon btn-base index-page-button" href="#" data-animation-in="fadeInUp" data-animation-in-delay="1400" data-animation-out="fadeOutDown" data-animation-out-delay="100"> Calcular </a> </div>
+                                </div>
+                                <a id="quote_request" class="btn btn-icon btn-base index-page-button" href="javascript:;" data-animation-in="fadeInUp" data-animation-in-delay="1400" data-animation-out="fadeOutDown" data-animation-out-delay="100"> Calcular </a> </div>
                         </div>
                         <div class="col-md-3"></div>
                     </div>
@@ -432,7 +438,7 @@
         </div>
     </div>
     </div>
-    <div id="service" class="simulator-cal-prev"  style="display:none">
+    <div id="invoice" class="simulator-cal-prev"  style="display:none">
         <div class="section-wrap">
             <div class="section-cell">
                 <div class="container">
@@ -454,15 +460,15 @@
                                     </tr>
                                     <tr class="item">
                                         <td> Precio todo incluido </td>
-                                        <td> 6.978 € </td>
+                                        <td id="quote_total_price"> 6.978 € </td>
                                     </tr>
                                     <tr class="item">
                                         <td> Descuento bienvenida Viesgo </td>
-                                        <td> -1.395 € </td>
+                                        <td id="quote_total_discount"> -1.395 € </td>
                                     </tr>
                                     <tr class="total">
                                         <td>Total:</td>
-                                        <td> $385.00 </td>
+                                        <td id="total_after_discount"> $385.00 </td>
                                     </tr>
                                     <tr class="heading">
                                         <td> Ahorro estimado </td>
@@ -470,14 +476,16 @@
                                     </tr>
                                     <tr class="item">
                                         <td> Hábitos de consumo actuales </td>
-                                        <td> 4.657 € </td>
+                                        <td id="current_consumption_price"> 4.657 € </td>
                                     </tr>
                                     <tr class="item last">
                                         <td> Mejorando hábitos de consumo actuales </td>
-                                        <td> 8.933 € </td>
+                                        <td id="improved_consumption_price"> 8.933 € </td>
                                     </tr>
                                 </table>
-                                <div class="calulator-button"> <a class="btn btn-icon btn-base index-page-button" href="#" data-animation-in="fadeInUp" data-animation-in-delay="1400" data-animation-out="fadeOutDown" data-animation-out-delay="100"> Solicitar presupuesto </a> </div>
+                                <div class="calulator-button"> 
+                                    <a id="invoice_btn" class="btn btn-icon btn-base index-page-button" href="javascript:;" data-animation-in="fadeInUp" data-animation-in-delay="1400" data-animation-out="fadeOutDown" data-animation-out-delay="100"> Solicitar presupuesto </a> 
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -485,7 +493,7 @@
             </div>
         </div>
     </div>
-    <div id="service" class="simulator-cal-prev"  style="display:none">
+    <div id="Personal_info" class="simulator-cal-prev"  style="display:none">
         <div class="section-wrap">
             <div class="section-cell">
                 <div class="container">
@@ -507,15 +515,16 @@
                                     <div class="col-sm-12">
                                         <div class="form-group required from-group-border">
                                             <label class="form-label from-group-cont" for="contact_name"></label>
-                                            <input type="text" class="form-control" id="number" name="name" placeholder="Mobile no"> </div>
+                                            <input type="text" class="form-control" id="Mobile" name="name" placeholder="Mobile no"> </div>
                                     </div>
                                     <div class="col-sm-12">
                                         <div class="form-group required from-group-border">
                                             <label class="form-label from-group-cont" for="contact_email"></label>
-                                            <input type="text" class="form-control" id="contact_email" name="email" placeholder="Email address"> </div>
+                                            <input type="text" class="form-control" id="EmailID" name="email" placeholder="Email address"> </div>
                                     </div>
                                 </div>
-                                <div class=""> <a class="btn btn-icon btn-base index-page-button" href="#" data-animation-in="fadeInUp" data-animation-in-delay="1400" data-animation-out="fadeOutDown" data-animation-out-delay="100"><i class="fa fa-send"></i> Send Message </a> </div>
+                                <div class=""> 
+                                    <a id="final_submit" class="btn btn-icon btn-base index-page-button" href="javascript:;" data-animation-in="fadeInUp" data-animation-in-delay="1400" data-animation-out="fadeOutDown" data-animation-out-delay="100"><i class="fa fa-send"></i> Send Message </a> </div>
                                 <div class="form-notify"></div>
                             </form>
                         </div>
@@ -577,9 +586,13 @@
     </script>
     <script>
       var map;
+      var currency = 'USD';
       var panel_size = 1.9; // 1946 * 982 / 1000000
+      var per_panel_cost = 115.99; // USD
+      var per_windmill_cost = 1200; // USD
+      var welcome_discount = 100; // USD
       var polygon_corners = Array();
-      var final_polygon = null;        
+      var final_polygon = null;
       // Create a meausure object to store our markers, MVCArrays, lines and polygons
       var measure = {
           mvcLine: new google.maps.MVCArray(),
@@ -589,7 +602,11 @@
           line: null,
           polygon: null,
           solarPanels : 0,
-          windMills : 0
+          windMills : 0,
+          polygonCorners : null,
+          windMillPosition : Array(),
+          solarEnergy : 0,
+          windMillsEnergy : 0
       };
 
 
@@ -602,6 +619,109 @@
         });
 
         initAutocomplete(map);
+
+        $("#continue").click(function(){
+            $("#InstalltionType").show('slow');
+            $('html, body').animate({
+                scrollTop: $("#InstalltionType").offset().top
+            }, 1000);
+        });
+
+        $(".installationType").click(function(){
+            $("#ElectricityBills").show('slow');
+            $('html, body').animate({
+                scrollTop: $("#ElectricityBills").offset().top
+            }, 1000);
+        });
+
+        $("#electricity_next_btn").click(function(){
+            $("#WhenConsumeMoreLight").show('slow');
+            $('html, body').animate({
+                scrollTop: $("#WhenConsumeMoreLight").offset().top
+            }, 1000);
+        });
+
+        $(".consume_type_checkbox").click(function(){
+            $("#Budget").show('slow');
+            $('html, body').animate({
+                scrollTop: $("#Budget").offset().top
+            }, 1000);
+        });
+
+        $("#budget_btn").click(function(){
+            $("#Advice").show('slow');
+            $('html, body').animate({
+                scrollTop: $("#Advice").offset().top
+            }, 1000);
+        });
+
+        $("#quote_request").click(function(){
+            var solar_panel_cost = measure.solarPanels * per_panel_cost;
+            var windmill_cost = measure.windMills * per_windmill_cost;
+            var total = parseFloat(solar_panel_cost) + parseFloat(windmill_cost);
+            total = total.toFixed(2);
+            $("#quote_total_price").html(total+' '+currency);
+            
+            $("#quote_total_discount").html(welcome_discount+' '+currency);
+            
+            var total_after_discount = parseFloat(total) - parseFloat(welcome_discount);
+            total_after_discount = total_after_discount.toFixed(2);
+            $("#total_after_discount").html(total_after_discount+' '+currency);
+
+            var current_consumption_price = $("#Budget_Input").val();
+            $("#current_consumption_price").html(current_consumption_price+' '+currency);
+            $("#improved_consumption_price").html(0+' '+currency);
+            $("#invoice").show('slow');
+            $('html, body').animate({
+                scrollTop: $("#invoice").offset().top
+            }, 1000);
+        });
+
+        $("#invoice_btn").click(function(){
+            $("#Personal_info").show('slow');
+            $('html, body').animate({
+                scrollTop: $("#Personal_info").offset().top
+            }, 1000);
+        });
+
+        $("#final_submit").click(function(){
+            var user_data = {};
+            user_data.Polygon = measure.polygonCorners;
+            user_data.WindMills = measure.windMillPosition;
+            user_data.InstalltionType = $('.installationType:checked').val();
+            user_data.ElectricityBills = rangeSlider.value;
+            user_data.NoOfPanels = measure.solarPanels;
+            user_data.NoOfWindMills = measure.windMills;
+            user_data.Total = $("#total_after_discount").html();
+            user_data.TotalPowerGenerated = parseFloat(measure.solarEnergy) + parseFloat(measure.windMillsEnergy);
+
+            var tmp = Array();
+            $('.consume_type_checkbox:checked').each(function(index, item){
+              tmp.push($(item).val())
+            });
+
+            user_data.WhenConsumeMoreLight = tmp;
+            user_data.Budget = $("#Budget_Input").val();
+            user_data.Advice = $("#contact_message").val();
+            user_data.Mobile = $("#Mobile").val()
+            user_data.EmailID = $("#EmailID").val();
+
+            $.ajax({
+                url : 'includes/save_user_quotation.php',
+                type : 'POST',
+                data : user_data,
+                success : function(data) {
+                    data = JSON.parse(data);
+                    if(data.msg == 'SUCCESS') {
+                        alert('Details are saved successfully');
+                        window.location = 'login.html';
+                    } else {
+                        alert('Something goes wrong, please try later');
+                    }
+                }
+            })
+        });
+        
     });
     
     function enablePolygonDrawing() {
@@ -633,6 +753,7 @@
                 icon: 'assets/img/windmill.png' // null = default icon
             });
             measure.mvcWindMills.push(marker);
+            measure.windMillPosition.push({lat: evt.latLng.lat(), lng: evt.latLng.lng()});
             measureWindMillCalc();
             google.maps.event.clearListeners(map, 'click');
             markerCallBacks();
@@ -697,7 +818,8 @@
               fillColor: '#FF0000',
               fillOpacity: 0.35
             });
-            final_polygon.setMap(map); 
+            final_polygon.setMap(map);
+            measure.polygonCorners =  polygon_corners;
             polygon_corners = Array();                       
         });
 
@@ -792,10 +914,10 @@
             var area = google.maps.geometry.spherical.computeArea(measure.polygon.getPath());
             console.log("Area is "+area+' sq mt');
             var number_of_panel = parseFloat(area.toFixed(1)) / panel_size;
-            measure.solarPanels = number_of_panel;
+            measure.solarPanels = parseInt(number_of_panel);
             var energy_created = ( parseInt(number_of_panel) * 320 ) / 1000;
             jQuery("#calculated_power").text(energy_created);
-
+            measure.solarEnergy = energy_created;
             var roof_used = getRandomInt(5, 10);
             jQuery("#calculated_roof").text(100 - roof_used);
         }
@@ -806,8 +928,8 @@
         if (measure.mvcWindMills.getLength() >= 0) {
             jQuery("#calculated_windmill").html(measure.mvcWindMills.getLength() * 2);
             measure.windMills = measure.mvcWindMills.getLength();
+            measure.windMillsEnergy = measure.mvcWindMills.getLength() * 2;
         }
-
     }
 
     function getRandomInt(min, max) {
