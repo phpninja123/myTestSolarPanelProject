@@ -623,6 +623,7 @@
     }
 
     function enableWindMillDrawing() {
+        map.setOptions({draggableCursor:'crosshair'});
         google.maps.event.addListener(map, "click", function(evt) {
             marker = new google.maps.Marker({
                 map:        map,
@@ -635,6 +636,7 @@
             measureWindMillCalc();
             google.maps.event.clearListeners(map, 'click');
             markerCallBacks();
+            map.setOptions({draggableCursor:null});
         });
 
         $("#main_search").hide();
@@ -644,6 +646,7 @@
     function markerCallBacks(){
         if( measure.mvcWindMills.getLength() > 0 ) {
             measure.mvcWindMills.b.forEach((marker, index, array) => {
+                google.maps.event.clearListeners(marker, 'dblclick');
                 google.maps.event.addListener(marker, "dblclick", function (e) { 
                    marker.setMap(null);
                    console.log(measure.mvcWindMills.getLength());
