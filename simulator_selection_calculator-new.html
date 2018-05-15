@@ -193,7 +193,7 @@
                     </div>
                 </div>
             </div>
-            <div id="solar_1" class="section" style="display:none; z-index:990;width: 500px;">
+            <!-- <div id="solar_1" class="section" style="display:none; z-index:990;width: 500px;">
                 <div class="section-wrap">
                     <div class="section-cell">
                         <div class="container-fluid map-section">
@@ -205,7 +205,8 @@
                                                 <div class="col-sm-12">
                                                     <div class="form-group required">
                                                         <label class="form-label" for="contact_name"></label>
-                                                        <input type="text" class="form-control" id="contact_name" name="name" placeholder="Introduce to direction" area-hidden="true"> </div>
+                                                        <input type="text" class="form-control" id="contact_name" name="name" placeholder="Introduce to direction" area-hidden="true"> 
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div class="form-notify"></div>
@@ -225,7 +226,9 @@
                                             <br>
                                             <div class="roof-info-row info-row-padding">
                                                 <div class="row text-center"> 
-                                                    <a id="start_drawing" class="btn btn-icon btn-base index-page-button simulator-cal-button" href="javascript:enablePolygonDrawing();" data-effect="mfp-zoom-in" data-animation-in="fadeInUp" data-animation-in-delay="1200" data-animation-out="fadeOutDown" data-animation-out-delay="300"> Empieza a dibujar</a>                                       </div>
+                                                    <a id="start_drawing_1" class="btn btn-icon btn-base index-page-button simulator-cal-button" href="javascript:enablePolygonDrawing();" data-effect="mfp-zoom-in" data-animation-in="fadeInUp" data-animation-in-delay="1200" data-animation-out="fadeOutDown" data-animation-out-delay="300"> Empieza a dibujar</a>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -233,7 +236,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <div id="solar_2" class="section" style="display:none; z-index:990;width: 500px;">
                 <div class="section-wrap">
                     <div class="section-cell">
@@ -263,19 +266,19 @@
                                                 <br>
                                                 <p class="map-simulator-selection-para">Utiliza el cursor para marcar, punto a punto, toda la superficie de tu tejado superficie de tu tejado</p>
                                             </div>
-                                            <div class="roof-info-row info-row-padding">
-                                                <div class="calculator-box"> <img class="info-roof-image-box-calc" src="assets/img/solar-panel.png"> </div>
-                                                <div class="calculator-box-right">
-                                                    <p class="map-simulator-selection-para">2.691 kWh de potencia fotovoltaica</p>
-                                                </div>
-                                            </div>
-                                            <div class="roof-info-row info-row-padding">
+                                            <div id="solar_panel_power" class="roof-info-row info-row-padding">
                                                 <div class="calculator-box"> <img class="info-roof-image-box-calc" src="assets/img/sun.png"> </div>
                                                 <div class="calculator-box-right">
-                                                    <p class="map-simulator-selection-para">2.691 kWh de potencia fotovoltaica</p>
+                                                    <p class="map-simulator-selection-para"><span id="calculated_power">0</span> kWh de potencia fotovoltaica</p>
                                                 </div>
                                             </div>
-                                            <div class="roof-info-row info-row-padding">
+                                            <div id="roof_available" class="roof-info-row info-row-padding" style="">
+                                                <div class="calculator-box"> <img class="info-roof-image-box-calc" src="assets/img/solar-panel.png"> </div>
+                                                <div class="calculator-box-right">
+                                                    <p class="map-simulator-selection-para"><span id="calculated_roof">0</span> % de techo disponible</p>
+                                                </div>
+                                            </div>
+                                            <div id="wind_mill" class="roof-info-row info-row-padding" style="display:none">
                                                 <div class="calculator-box"> <img class="info-roof-image-box-calc" src="assets/img/wind-turbine.png"> </div>
                                                 <div class="calculator-box-right">
                                                     <p class="map-simulator-selection-para">2.691 kWh de potencia fotovoltaica</p>
@@ -283,7 +286,11 @@
                                             </div>
                                             <br>
                                             <div class="roof-info-row info-row-padding">
-                                                <div class="row text-center"> <a class="btn btn-icon btn-base index-page-button simulator-cal-button" href="#" data-effect="mfp-zoom-in" data-animation-in="fadeInUp" data-animation-in-delay="1200" data-animation-out="fadeOutDown" data-animation-out-delay="300"> Add Wind </a> <a class="btn btn-icon btn-base index-page-button simulator-cal-button" href="#" data-effect="mfp-zoom-in" data-animation-in="fadeInUp" data-animation-in-delay="1200" data-animation-out="fadeOutDown" data-animation-out-delay="300"> Add solar point </a> </div>
+                                                <div class="row text-center"> 
+                                                    <a class="btn btn-icon btn-base index-page-button simulator-cal-button" href="#" data-effect="mfp-zoom-in" data-animation-in="fadeInUp" data-animation-in-delay="1200" data-animation-out="fadeOutDown" data-animation-out-delay="300"> Add Wind </a> 
+                                                    <!-- <a id="start_drawing" class="btn btn-icon btn-base index-page-button simulator-cal-button" href="javascript:enablePolygonDrawing();" data-effect="mfp-zoom-in" data-animation-in="fadeInUp" data-animation-in-delay="1200" data-animation-out="fadeOutDown" data-animation-out-delay="300"> Empieza a dibujar</a> -->
+                                                    <a id="start_drawing" class="btn btn-icon btn-base index-page-button simulator-cal-button" href="javascript:enablePolygonDrawing();" data-effect="mfp-zoom-in" data-animation-in="fadeInUp" data-animation-in-delay="1200" data-animation-out="fadeOutDown" data-animation-out-delay="300"> Add solar point </a> 
+                                                </div>
                                                 <div class="row text-center simulator-cal-button-conti"> <a class="btn btn-icon btn-base index-page-button" href="#" data-effect="mfp-zoom-in" data-animation-in="fadeInUp" data-animation-in-delay="1200" data-animation-out="fadeOutDown" data-animation-out-delay="300"> Continue </a> </div>
                                             </div>
                                         </div>
@@ -570,7 +577,9 @@
     </script>
     <script>
       var map;
-
+      var panel_size = 1.9; // 1946 * 982 / 1000000
+      var polygon_corners = Array();
+      var final_polygon = null;        
       // Create a meausure object to store our markers, MVCArrays, lines and polygons
       var measure = {
           mvcLine: new google.maps.MVCArray(),
@@ -585,18 +594,29 @@
         map = new google.maps.Map(document.getElementById("map"), {
             zoom: 15,
             center: new google.maps.LatLng(39.57592, -105.01476),
-            mapTypeId: google.maps.MapTypeId.ROADMAP,
-            draggableCursor: "crosshair" // Make the map cursor a crosshair so the user thinks they should click something
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+            // draggableCursor: "crosshair" // Make the map cursor a crosshair so the user thinks they should click something
         });
 
         initAutocomplete(map);
     });
     
     function enablePolygonDrawing() {
+        $("#start_drawing").text('Re-Draw Solar Point');
+        measureReset();
+        jQuery("#calculated_power").text(0);
+        jQuery("#calculated_roof").text(0);
         google.maps.event.addListener(map, "click", function(evt) {
             // When the map is clicked, pass the LatLng obect to the measureAdd function
             measureAdd(evt.latLng);
+            polygon_corners.push({lat: evt.latLng.lat(), lng: evt.latLng.lng()});
+            console.log(polygon_corners);
         });
+
+        $("#main_search").hide();
+        // $("#solar_1").hide();
+        $("#solar_2").show();
+        map.setOptions({draggableCursor:'crosshair'});
     }
 
 
@@ -609,7 +629,7 @@
             draggable: true,
             raiseOnDrag: false,
             title: "Drag me to change shape",
-            icon: new google.maps.MarkerImage("assets/img/ico-map-big.png", new google.maps.Size(9, 9), new google.maps.Point(0, 0), new google.maps.Point(5, 5))
+            icon: new google.maps.MarkerImage("assets/img/temp.png", new google.maps.Size(9, 9), new google.maps.Point(0, 0), new google.maps.Point(5, 5))
         });
 
         // Add this LatLng to our line and polygon MVCArrays
@@ -625,14 +645,32 @@
         // We'll need this later to update the MVCArray if the user moves the measure vertexes
         var latLngIndex = measure.mvcLine.getLength() - 1;
 
+         // When the user mouses over the measure vertex markers, change shape and color to make it obvious they can be moved
+        google.maps.event.addListener(marker, "click", function() {
+            measureReset();
+            google.maps.event.clearListeners(map, 'click');
+            map.setOptions({draggableCursor:null});
+            console.log(marker.getPosition());
+            final_polygon = new google.maps.Polygon({
+              paths: polygon_corners,
+              strokeColor: '#FF0000',
+              strokeOpacity: 0.8,
+              strokeWeight: 2,
+              fillColor: '#FF0000',
+              fillOpacity: 0.35
+            });
+            final_polygon.setMap(map); 
+            polygon_corners = Array();                       
+        });
+
         // When the user mouses over the measure vertex markers, change shape and color to make it obvious they can be moved
         google.maps.event.addListener(marker, "mouseover", function() {
-            marker.setIcon(new google.maps.MarkerImage("assets/img/ico-map-big.png", new google.maps.Size(15, 15), new google.maps.Point(0, 0), new google.maps.Point(8, 8)));
+            marker.setIcon(new google.maps.MarkerImage("assets/img/temp.png", new google.maps.Size(15, 15), new google.maps.Point(0, 0), new google.maps.Point(8, 8)));
         });
 
         // Change back to the default marker when the user mouses out
         google.maps.event.addListener(marker, "mouseout", function() {
-            marker.setIcon(new google.maps.MarkerImage("assets/img/ico-map-big.png", new google.maps.Size(9, 9), new google.maps.Point(0, 0), new google.maps.Point(5, 5)));
+            marker.setIcon(new google.maps.MarkerImage("assets/img/temp.png", new google.maps.Size(9, 9), new google.maps.Point(0, 0), new google.maps.Point(5, 5)));
         });
 
         // When the measure vertex markers are dragged, update the geometry of the line and polygon by resetting the
@@ -708,15 +746,25 @@
 
         // Use the Google Maps geometry library to measure the length of the line
         var length = google.maps.geometry.spherical.computeLength(measure.line.getPath());
-        jQuery("#span-length").text(length.toFixed(1))
+        // jQuery("#span-length").text(length.toFixed(1))
 
         // If we have a polygon (>2 vertexes in the mvcPolygon MVCArray)
         if (measure.mvcPolygon.getLength() > 2) {
             // Use the Google Maps geometry library to measure the area of the polygon
             var area = google.maps.geometry.spherical.computeArea(measure.polygon.getPath());
-            jQuery("#span-area").text(area.toFixed(1));
+            console.log("Area is "+area+' sq mt');
+            var number_of_panel = parseFloat(area.toFixed(1)) / panel_size;
+            var energy_created = ( parseInt(number_of_panel) * 320 ) / 1000;
+            jQuery("#calculated_power").text(energy_created);
+
+            var roof_used = getRandomInt(5, 10);
+            jQuery("#calculated_roof").text(100 - roof_used);
         }
 
+    }
+
+    function getRandomInt(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
     }
 
     function measureReset() {
@@ -730,7 +778,9 @@
             measure.line.setMap(null);
             measure.line = null
         }
-
+        if(final_polygon) {
+            final_polygon.setMap(null);
+        }
         // Empty the mvcLine and mvcPolygon MVCArrays
         measure.mvcLine.clear();
         measure.mvcPolygon.clear();
@@ -739,10 +789,7 @@
         measure.mvcMarkers.forEach(function(elem, index) {
             elem.setMap(null);
         });
-        measure.mvcMarkers.clear();
-
-        jQuery("#span-length,#span-area").text(0);
-
+        measure.mvcMarkers.clear();        
     }
 
     function initAutocomplete(map) {
@@ -804,8 +851,9 @@
             });
             // map.fitBounds(bounds);
             map.setZoom(19);
+            // map.setDraggableCursor("crosshair");
             $("#main_search").hide();
-            $("#solar_1").show();
+            $("#solar_2").show();
         });
     }
     </script>
