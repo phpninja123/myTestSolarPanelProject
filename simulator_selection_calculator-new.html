@@ -278,16 +278,16 @@
                                                     <p class="map-simulator-selection-para"><span id="calculated_roof">0</span> % de techo disponible</p>
                                                 </div>
                                             </div>
-                                            <div id="wind_mill" class="roof-info-row info-row-padding" style="display:none">
+                                            <div id="wind_mill" class="roof-info-row info-row-padding">
                                                 <div class="calculator-box"> <img class="info-roof-image-box-calc" src="assets/img/wind-turbine.png"> </div>
                                                 <div class="calculator-box-right">
-                                                    <p class="map-simulator-selection-para">2.691 kWh de potencia fotovoltaica</p>
+                                                    <p class="map-simulator-selection-para"><span id="calculated_windmill">0</span> kWh de potencia fotovoltaica</p>
                                                 </div>
                                             </div>
                                             <br>
                                             <div class="roof-info-row info-row-padding">
                                                 <div class="row text-center"> 
-                                                    <a class="btn btn-icon btn-base index-page-button simulator-cal-button" href="#" data-effect="mfp-zoom-in" data-animation-in="fadeInUp" data-animation-in-delay="1200" data-animation-out="fadeOutDown" data-animation-out-delay="300"> Add Wind </a> 
+                                                    <a class="btn btn-icon btn-base index-page-button simulator-cal-button" href="javascript:enableWindMillDrawing()" data-effect="mfp-zoom-in" data-animation-in="fadeInUp" data-animation-in-delay="1200" data-animation-out="fadeOutDown" data-animation-out-delay="300"> Add Wind </a> 
                                                     <!-- <a id="start_drawing" class="btn btn-icon btn-base index-page-button simulator-cal-button" href="javascript:enablePolygonDrawing();" data-effect="mfp-zoom-in" data-animation-in="fadeInUp" data-animation-in-delay="1200" data-animation-out="fadeOutDown" data-animation-out-delay="300"> Empieza a dibujar</a> -->
                                                     <a id="start_drawing" class="btn btn-icon btn-base index-page-button simulator-cal-button" href="javascript:enablePolygonDrawing();" data-effect="mfp-zoom-in" data-animation-in="fadeInUp" data-animation-in-delay="1200" data-animation-out="fadeOutDown" data-animation-out-delay="300"> Add solar point </a> 
                                                 </div>
@@ -555,7 +555,7 @@
     <script src='assets/js/main.js'></script>
     <!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDRO7xg-rb-NeJDKBVVBziuMa2PRuHaNVU&libraries=places"
          ></script> -->
-    <script src="http://maps.google.com/maps/api/js?sensor=true&key=AIzaSyDRO7xg-rb-NeJDKBVVBziuMa2PRuHaNVU&libraries=geometry,visualization,places"></script>
+    <script src="http://maps.google.com/maps/api/js?sensor=true&key=AIzaSyDRO7xg-rb-NeJDKBVVBziuMa2PRuHaNVU&libraries=geometry,visualization,places&region=es"></script>
     
     <script src='assets/js/custom.js'></script>
     <script>
@@ -585,8 +585,11 @@
           mvcLine: new google.maps.MVCArray(),
           mvcPolygon: new google.maps.MVCArray(),
           mvcMarkers: new google.maps.MVCArray(),
+          mvcWindMills: new google.maps.MVCArray(),
           line: null,
-          polygon: null
+          polygon: null,
+          solarPanels : 0,
+          windMills : 0
       };
 
 
@@ -617,6 +620,38 @@
         // $("#solar_1").hide();
         $("#solar_2").show();
         map.setOptions({draggableCursor:'crosshair'});
+    }
+
+    function enableWindMillDrawing() {
+        google.maps.event.addListener(map, "click", function(evt) {
+            marker = new google.maps.Marker({
+                map:        map,
+                draggable:  true,
+                animation:  google.maps.Animation.DROP,
+                position:   evt.latLng,
+                icon: 'assets/img/windmill.png' // null = default icon
+            });
+            measure.mvcWindMills.push(marker);
+            measureWindMillCalc();
+            google.maps.event.clearListeners(map, 'click');
+            markerCallBacks();
+        });
+
+        $("#main_search").hide();
+        $("#solar_2").show();                    
+    }
+
+    function markerCallBacks(){
+        if( measure.mvcWindMills.getLength() > 0 ) {
+            measure.mvcWindMills.b.forEach((marker, index, array) => {
+                google.maps.event.addListener(marker, "dblclick", function (e) { 
+                   marker.setMap(null);
+                   console.log(measure.mvcWindMills.getLength());
+                   measure.mvcWindMills.pop();
+                   measureWindMillCalc();
+                });
+            });
+        }
     }
 
 
@@ -754,11 +789,20 @@
             var area = google.maps.geometry.spherical.computeArea(measure.polygon.getPath());
             console.log("Area is "+area+' sq mt');
             var number_of_panel = parseFloat(area.toFixed(1)) / panel_size;
+            measure.solarPanels = number_of_panel;
             var energy_created = ( parseInt(number_of_panel) * 320 ) / 1000;
             jQuery("#calculated_power").text(energy_created);
 
             var roof_used = getRandomInt(5, 10);
             jQuery("#calculated_roof").text(100 - roof_used);
+        }
+
+    }
+
+    function measureWindMillCalc() {
+        if (measure.mvcWindMills.getLength() >= 0) {
+            jQuery("#calculated_windmill").html(measure.mvcWindMills.getLength() * 2);
+            measure.windMills = measure.mvcWindMills.getLength();
         }
 
     }
