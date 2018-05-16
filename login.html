@@ -6,6 +6,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>E-LON</title>
+    <meta name="google-signin-client_id" content="634672388537-mjnc9ufhvh5qvrabg59ppfsb2opa0r5f.apps.googleusercontent.com">
     <meta name="description" content="">
     <meta name="keywords" content="">
     <meta name="author" content="">
@@ -63,7 +64,7 @@
         </div>
     </nav>
     <div class="site-wrap">
-        <header class="site-header ">
+        <!-- <header class="site-header ">
             <div class="container-fluid">
                 <div class="site-header-language mob-header">
                     <ul class="site-nav-language site-nav-language-list ">
@@ -80,7 +81,7 @@
                     <div class="site-header-icon-nav"> <span></span> <span></span> <span></span> </div>
                 </div>
             </div>
-        </header>
+        </header> -->
         <div class="mob-header-box"></div>
         <div class="site-layer"> </div>
         <main class="site-main">
@@ -99,17 +100,17 @@
                             <div class="section-content row">
                                 <div class="col-sm-6 ">
                                     <div class="overflow-hidden">
-                                        <form class="form-theme" id="form-contact" data-animation-in="fadeInLeft" data-animation-in-delay="700" data-animation-out="fadeInLeft" data-animation-out-delay="700">
+                                        <form class="form-theme" id="form-login" data-animation-in="fadeInLeft" data-animation-in-delay="700" data-animation-out="fadeInLeft" data-animation-out-delay="700">
                                             <div class="row">
                                                 <div class="col-sm-12 col-xs-12">
                                                     <div class="form-group required">
                                                         <label class="form-label" for="contact_email"></label>
-                                                        <input type="text" class="form-control" id="EmailID" name="EmailID" placeholder="Email address"> </div>
+                                                        <input type="email" class="form-control required" id="EmailID" name="EmailID" placeholder="Email address"> </div>
                                                 </div>
                                                 <div class="col-sm-12 col-xs-12">
                                                     <div class="form-group required">
                                                         <label class="form-label" for="password"></label>
-                                                        <input type="password" class="form-control" id="Password" name="Password" placeholder="Password"> </div>
+                                                        <input type="password" class="form-control required" id="Password" name="Password" placeholder="Password"> </div>
                                                 </div>
                                             </div>
                                             <div id="error_container"></div>
@@ -126,7 +127,16 @@
                                         <form class="form-theme" id="form-contact" data-animation-in="fadeInRight" data-animation-in-delay="700" data-animation-out="fadeOutRight" data-animation-out-delay="700">
                                             <div class="row">
                                                 <ul class="site-nav-social site-nav-social-list">
-                                                    <li><a href="#" target="_blank"><i class="fa fa-facebook" style=" background-color: #274fa6; margin-bottom: 4px;"></i><br><li><a href="#" target="_blank"><i class="fa fa-google-plus" style=" background-color:#ea4335; margin-bottom: 4px"></i></a></li>
+                                                    <li>
+                                                        <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+  </fb:login-button>
+                                                        <!-- <a href="#" target="_blank"><i class="fa fa-facebook" style=" background-color: #274fa6; margin-bottom: 4px;"></i> -->
+                                                            <br>
+                                                    <li>
+                                                        <!-- <a href="#" target="_blank"><i class="fa fa-google-plus" style=" background-color:#ea4335; margin-bottom: 4px"></i></a> -->
+                                                        <div class="g-signin2" data-onsuccess="onSignIn"></div>
+
+                                                    </li>
                                                 </ul>
                                             </div>
                                         </form>
@@ -137,18 +147,20 @@
                     </div>
                 </div>
             </div>
-            <div class="site-nav-footer site-nav-footer-cont-signup">
+            <!-- <div class="site-nav-footer site-nav-footer-cont-signup">
                 <ul class="site-nav-social site-nav-social-list ">
                     <li class="cont-box" style="padding: 20px;"><a href="contact_us.html">Contact</a></li>
                     <li style="padding: 20px;"><a href="#">Copyright 2018</a></li>
                     <li class="cont-box" style="padding: 20px;"><a href="http://brillexce.com/">Designed by: Brillexce</a></li>
                 </ul>
-            </div>
+            </div> -->
         </main>
     </div>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
     <script src="assets/js/vendor/jquery-2.1.4.min.js"></script>
     <script src='assets/js/vendor/bootstrap.min.js'></script>
     <script src='assets/js/vendor/plugin.js'></script>
+    <script src='assets/js/vendor/jquery.validate.min.js'></script>    
     <script src='assets/js/variable.js'></script>
     <script src='assets/js/main.js'></script>
     <script src='assets/js/custom.js'></script>
