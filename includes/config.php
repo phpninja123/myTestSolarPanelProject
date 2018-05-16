@@ -9,6 +9,6 @@ if( ENV == 'TEST' ) {
 } else {
 	define('HOST', 'db703433613.db.1and1.com');
 	define('USERNAME', 'dbo703433613');
-	define('PASSWORD', '');
+	define('PASSWORD', 'May*2018!');
 	define('DBNAME', 'db703433613');	
 }

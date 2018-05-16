@@ -183,8 +183,8 @@
                                                 </div>
                                             </div>
                                             <div class="row text-center"> 
-                                                <a class="btn btn-icon btn-base index-page-button" href="how_its_work.html" data-effect="mfp-zoom-in" data-animation-in="fadeInUp" data-animation-in-delay="1200" data-animation-out="fadeOutDown" data-animation-out-delay="300"> search </a></div>
-                                            <div class="form-notify"></div>
+                                                <a class="btn btn-icon btn-base index-page-button" href="javascript:search()" data-effect="mfp-zoom-in" data-animation-in="fadeInUp" data-animation-in-delay="1200" data-animation-out="fadeOutDown" data-animation-out-delay="300"> search </a></div>
+                                            <!-- <div class="form-notify"></div> -->
                                         </form>
                                     </div>
                                 </div>
@@ -242,7 +242,7 @@
                 <div class="section-wrap">
                     <div class="section-cell">
                         <div class="container-fluid map-section">
-                            <div class="section-content row">
+                            <div class="section-content row" style="display: none">
                                 <div class="col-sm-3">
                                     <div class="overflow-hidden">
                                         <form class="form-theme" id="form-contact" data-animation-in="fadeInLeft" data-animation-in-delay="700" data-animation-out="fadeInLeft" data-animation-out-delay="700">
@@ -614,7 +614,22 @@
         map = new google.maps.Map(document.getElementById("map"), {
             zoom: 15,
             center: new google.maps.LatLng(39.57592, -105.01476),
-            mapTypeId: google.maps.MapTypeId.ROADMAP
+            mapTypeId: 'roadmap',
+            styles : {
+                default: null,
+                hide: [
+                  {
+                    featureType: 'poi.business',
+                    stylers: [{visibility: 'off'}]
+                  },
+                  {
+                    featureType: 'transit',
+                    elementType: 'labels.icon',
+                    stylers: [{visibility: 'off'}]
+                  }
+                ]
+              }
+            // styles: [{"stylers":[{"visibility":"off"}]},{"featureType":"road","stylers":[{"visibility":"on"},{"color":"#ffffff"}]},{"featureType":"road.arterial","stylers":[{"visibility":"on"},{"color":"#fee379"}]},{"featureType":"road.highway","stylers":[{"visibility":"on"},{"color":"#fee379"}]},{"featureType":"landscape","stylers":[{"visibility":"on"},{"color":"#f3f4f4"}]},{"featureType":"water","stylers":[{"visibility":"on"},{"color":"#7fc8ed"}]},{},{"featureType":"road","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"poi.park","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#83cead"}]},{"elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"landscape.man_made","elementType":"geometry","stylers":[{"weight":0.9},{"visibility":"off"}]}]
             // draggableCursor: "crosshair" // Make the map cursor a crosshair so the user thinks they should click something
         });
 
@@ -726,6 +741,7 @@
     
     function enablePolygonDrawing() {
         $("#start_drawing").text('Re-Draw Solar Point');
+        google.maps.event.clearListeners(map, 'click');
         measureReset();
         jQuery("#calculated_power").text(0);
         jQuery("#calculated_roof").text(0);
@@ -964,65 +980,27 @@
     function initAutocomplete(map) {
         // Create the search box and link it to the UI element.
         var input = document.getElementById('main_search_bar');
-        var searchBox = new google.maps.places.SearchBox(input);
-        // map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+        // var searchBox = new google.maps.places.SearchBox(input);
+        var autocomplete = new google.maps.places.Autocomplete(input);
 
-        // Bias the SearchBox results towards current map's viewport.
-        map.addListener('bounds_changed', function() {
-            searchBox.setBounds(map.getBounds());
-        });
+        autocomplete.bindTo('bounds', map);
+        autocomplete.setComponentRestrictions(
+            {'country': ['es']});
+        var markers = [];       
+    }
 
-        var markers = [];
-        // Listen for the event fired when the user selects a prediction and retrieve
-        // more details for that place.
-        searchBox.addListener('places_changed', function() {
-            var places = searchBox.getPlaces();
-
-            if (places.length == 0) {
-                return;
-            }
-
-            // Clear out the old markers.
-            markers.forEach(function(marker) {
-                marker.setMap(null);
-            });
-            markers = [];
-
-            // For each place, get the icon, name and location.
-            var bounds = new google.maps.LatLngBounds();
-            places.forEach(function(place) {
-                if (!place.geometry) {
-                    console.log("Returned place contains no geometry");
-                    return;
-                }
-                var icon = {
-                    url: place.icon,
-                    size: new google.maps.Size(71, 71),
-                    origin: new google.maps.Point(0, 0),
-                    anchor: new google.maps.Point(17, 34),
-                    scaledSize: new google.maps.Size(25, 25)
-                };
-
-                // Create a marker for each place.
-                markers.push(new google.maps.Marker({
-                    map: map,
-                    icon: icon,
-                    title: place.name,
-                    position: place.geometry.location
-                }));
-
-                if (place.geometry.viewport) {
-                    // Only geocodes have viewport.
-                    // bounds.union(place.geometry.viewport);
-                } else {
-                    // bounds.extend(place.geometry.location);
-                }
-            });
-            // map.fitBounds(bounds);
-            map.setZoom(19);
-            // map.setDraggableCursor("crosshair");
+    function search(){
+        var geocoder = new google.maps.Geocoder();
+        var address = $("#main_search_bar").val();
+        geocoder.geocode({'address': address}, function(results, status) {
+          if (status === 'OK') {
+            map.setCenter(results[0].geometry.location);
+            map.setZoom(17);
             $("#main_search").hide();
             $("#solar_2").show();
+          } else {
+            alert('Geocode was not successful for the following reason: ' + status);
+          }
         });
     }
     </script>
